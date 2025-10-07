@@ -1,6 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suiiiiiiiii - Ronaldo</title>
+  <style>
+
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: radial-gradient(circle at center, #190000 0%, #000 100%);
+      overflow: hidden;
+      color: #fff;
+    }
+
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(255,0,0,0.2), transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: gold;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+      animation: pulse 2s infinite ease-in-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,215,0,0.4);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 30px rgba(255,215,0,0.9), 0 0 70px rgba(255,215,0,0.6);
+        transform: scale(1.05);
+      }
+    }
+
+    .sub {
+      font-size: 1.3rem;
+      color: #ff6666;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 25px;
+      background: linear-gradient(90deg, #ff4d4d, #ff0000);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      z-index: 2;
+    }
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #ff4d4d;
+    }
+
+
+    .ball {
+      position: absolute;
+      font-size: 2rem;
+      top: 60%;
+      animation: floatBall 3s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    @keyframes floatBall {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+
+    .grass {
+      position: absolute;
+      bottom: 0;
+      width: 120%;
+      height: 150px;
+      background: linear-gradient(to top, #8b0000, transparent);
+      transform: rotate(-2deg);
+      filter: blur(6px);
+      z-index: 1;
+    }
+    .light {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle at 50% 50%, rgba(255,0,0,0.15), transparent 60%);
+      animation: sweep 8s linear infinite;
+      transform-origin: center;
+      z-index: 0;
+    }
+
+    @keyframes sweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .cr7 {
+      position: absolute;
+      top: 15%;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffffcc;
+      letter-spacing: 3px;
+      animation: glowCR7 4s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    @keyframes glowCR7 {
+      0%,100% { text-shadow: 0 0 15px #ff4d4d; opacity: 1; }
+      50% { text-shadow: 0 0 35px #ff0000; opacity: 0.8; }
+    }
+  </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacktoberfest</title>
@@ -8,6 +141,15 @@
 </head>
 
 <body>
+  <div class="light"></div>
+  <div class="cr7">CR7 🔥 Legend</div>
+  <h1>Suiiiiiiiiiiiiiiiiiiiiiiiiiii</h1>
+  <p class="sub">The Celebration That Shook the World</p>
+  <div class="ball">⚽</div>
+  <button class="btn" onclick="alert('GOAT Mode Activated 🐐')">Celebrate</button>
+  <div class="grass"></div>
+</body>
+</html>
     <h1>HacktoberFest</h1>
     <div class="img-container">
         <img src="https://wallpapers.com/images/thumbnail/sports-iphone-tc1tkl9fbc9wlzeo.webp" alt="Siuuu">
